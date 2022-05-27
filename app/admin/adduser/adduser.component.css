@@ -1,0 +1,45 @@
+
+
+
+@media (min-width: 1025px) {
+  .h-custom {
+    height: 130vh !important;
+
+  }
+}
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+  font-size: 1rem;
+  line-height: 2.15;
+  padding-left: .75em;
+  padding-right: .75em;
+}
+.card-registration .select-arrow {
+  top: 13px;
+}
+
+.gradient-custom-2 {
+  /* fallback for old browsers */
+  background-image: url('https://th.bing.com/th/id/R.98d61b8abe1d7acfe9367d31a8e47e0c?rik=8NoysUsdMIK5JA&riu=http%3a%2f%2fwww.baltana.com%2ffiles%2fwallpapers-2%2fBlue-Powerpoint-Background-Widescreen-Wallpapers-06723.jpg&ehk=T54RxgRWvjagEjxw1AR%2fUl2cpJkdEJ3mGvZ0O7lkLKA%3d&risl=&pid=ImgRaw&r=0');
+
+
+
+}
+
+.bg-indigo {
+  background-color: #5e5981;
+}
+@media (min-width: 992px) {
+  .card-registration-2 .bg-indigo {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+}
+@media (max-width: 991px) {
+  .card-registration-2 .bg-indigo {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+}
+.bg-indig{
+  background-color:rgb(102, 146, 144) ;
+}

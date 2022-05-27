@@ -1,0 +1,59 @@
+
+<body>
+<div class="container mt-6 mb-4 d-flex justify-content-center align-items-center" >
+
+  <div class="card p-3 text-center py-4">
+
+      <div>
+          <img src="https://i.imgur.com/dkWaSol.png" width="70">
+      </div>
+ <form  [formGroup]="Roleform">
+      <div class="px-sm-4 mt-3 px-3">
+        <input class="form-control mt-3" placeholder="Role_Uniqid" formControlName='Roleuniqid'>
+        <div *ngIf="Roleform.controls['Roleuniqid'].invalid && (Roleform.controls['Roleuniqid'].dirty || Roleform.controls['Roleuniqid'].touched)">
+          <div *ngIf="Roleform.controls['Roleuniqid'].errors?.['required']" style="color: rgb(233, 59, 59);">Roleuniqid is required.</div>
+          </div>
+        <input class="form-control mt-3" placeholder="Role_Id" formControlName='Roleid'>
+        <div *ngIf="Roleform.controls['Roleid'].invalid && (Roleform.controls['Roleid'].dirty || Roleform.controls['Roleid'].touched)">
+          <div *ngIf="Roleform.controls['Roleid'].errors?.['required']" style="color: rgb(233, 59, 59);">Roleid is required.</div>
+          </div>
+          <input class="form-control mt-3" placeholder="Rolename" formControlName='Rolename'>
+          <div *ngIf="Roleform.controls['Rolename'].invalid && (Roleform.controls['Rolename'].dirty || Roleform.controls['Rolename'].touched)">
+            <div *ngIf="Roleform.controls['Rolename'].errors?.['required']" style="color: rgb(233, 59, 59);">Rolename is required.</div>
+            </div><br>
+          <div ><select class="form-select  form-control form-control-lg"    formControlName='roletype'>
+            <option value="" disabled selected hidden>RoleType</option>
+            <option>Frontend </option>
+            <option >Admin</option>
+            <option>Both</option>
+
+            </select>
+            <div *ngIf="Roleform.controls['roletype'].invalid && (Roleform.controls['roletype'].dirty || Roleform.controls['roletype'].touched)">
+              <div *ngIf="Roleform.controls['roletype'].errors?.['required']" style="color: rgb(233, 59, 59);">roletype is required.</div>
+              </div>
+          </div><br>
+
+            <div ><select class="form-select  form-control form-control-lg"    formControlName='RoleStatus'>
+              <option value="" disabled selected hidden>RoleStatus</option>
+              <option >Y</option>
+              <option>N</option>
+
+              </select>
+              <div *ngIf="Roleform.controls['RoleStatus'].invalid && (Roleform.controls['RoleStatus'].dirty || Roleform.controls['RoleStatus'].touched)">
+                <div *ngIf="Roleform.controls['RoleStatus'].errors?.['required']" style="color: rgb(233, 59, 59);">RoleStatus is required.</div>
+                </div>
+            </div>
+      </div>
+       </form>
+   <br>
+      <div class="px-5 mt-4">
+           <button class="btn btn-secondary w-100 text-uppercase" [disabled]="!Roleform.valid" (click)="SaveRoles()">AddRole</button>
+      </div>
+
+
+
+
+  </div>
+
+</div>
+</body>

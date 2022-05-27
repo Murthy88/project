@@ -1,0 +1,38 @@
+<body class="bg-img">
+<div class="header2 ">
+  <div style="background-color:rgb(95, 22, 49);">
+    <nav class="navbar navbar-expand-sm navbar-dark h2-nav" >
+      <a class="navbar-brand" >Home</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header2" aria-controls="header2" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="icon-menu"></span>
+			</button>
+      <div class="collapse navbar-collapse hover-dropdown" id="header2"  >
+        <ul class="navbar-nav" >
+          <li class="nav-item dropdown position-relative" *ngIf="User!='user'" >
+            <a class="navbar-brand dropdown-toggle"   href="#" id="h2-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"    >
+							Admin <i class="fa fa-angle-down ml-1 font-12"></i>
+						</a>
+            <ul class="dropdown-menu"  style="background-color:black;">
+              <li><a class="dropdown-item" href="#" routerLink="/admin/viewuser" style="color: rgb(199, 96, 96);">Viewuser</a></li>
+              <li><a class="dropdown-item" href="#" routerLink="/admin/adduser" style="color: rgb(199, 96, 96);">Adduser</a></li>
+              <li><a class="dropdown-item" href="#" routerLink="/admin/viewrole" style="color: rgb(199, 96, 96);">Viewrole</a></li>
+              <li><a class="dropdown-item" href="#" routerLink="/admin/addrole" style="color: rgb(199, 96, 96);">Addrole</a></li>
+             <li><a class="dropdown-item" href="#" routerLink="/admin/editrole" style="color: rgb(199, 96, 96);" >Editrole</a></li>
+            </ul>
+          </li>
+        <a class="navbar-brand" href="#" routerLink="/admin/editdetails">Edit Profile</a>
+        <li class="nav-item dropdown position-relative" style="margin-left:900px;" >
+          <a class="navbar-brand dropdown-toggle"   href="#" id="h2-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+          <ul class="dropdown-menu"  style="background-color:black;">
+            <li><a class="dropdown-item"  routerLink="/login" style="color: rgb(199, 96, 96);">logout</a></li>
+          </ul>
+        </li>
+        <!-- <li class="navbar-brand" style="height: 10px;">
+          <a><img src="https://th.bing.com/th/id/R.88f4f67fe36423a9f099e32757f61acc?rik=CLtRO2eGANx4Vw&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_329115.png&ehk=mXoK%2be700RIpbejgADkfZYJSnzVqJhHHmQWdguPy40k%3d&risl=&pid=ImgRaw&r=0" class="img-fluid rounded-circle z-depth-0"width="40px"></a>
+        </li> -->
+      </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+</body>

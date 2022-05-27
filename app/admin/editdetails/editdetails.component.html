@@ -1,0 +1,47 @@
+<body>
+<div class="container rounded mt-5" style="border: 5px;;">
+<form [formGroup]="Editform">
+  <div class="row" >
+
+      <div class="col-md-4 border-right" >
+          <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img  [src]="url" width="375" >
+            <input type="file"  style="background-color: rgb(155, 86, 86);" (change)="onselectfile($event)" >
+            <span class="font-weight-bold"></span><span class="text-black-50"></span><span></span></div>
+      </div>
+      <div class="col-md-8">
+          <div class="p-3 py-5">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="d-flex flex-row align-items-center back"><i class="fa fa-long-arrow-left mr-1 mb-1"></i>
+                      <a href="/admin"  style="color:white">Back to home</a>
+                  </div>
+
+              </div>
+
+              <div class="row mt-2" >
+                  <div class="col-md-6"><input type="text" class="form-control" placeholder="First name" formControlName="FirstName" > <a style="color:white">FirstName</a></div>
+                  <div class="col-md-6"><input type="text" class="form-control"placeholder="Lastname" formControlName="lastName"><a style="color:white">lastName</a></div>
+              </div>
+              <div class="row mt-3">
+                  <div class="col-md-6" ><input type="text" class="form-control" placeholder="Email"  formControlName="Email" ><a style="color:white">Email</a></div>
+                  <div class="col-md-6"><input type="text" class="form-control" placeholder="Phone number" formControlName="PhoneNumber"><a style="color:white">PhoneNumber</a></div>
+              </div>
+              <div class="row mt-3">
+                  <div class="col-md-6"><input type="text" class="form-control" placeholder="Address"  formControlName="Address"><a style="color:white">Address</a></div>
+                  <div class="col-md-6"><input type="text" class="form-control"  placeholder="Mapaddresslink"  formControlName="Mapaddresslink"><a style="color:white">Mapaddresslink</a></div>
+              </div>
+              <div class="row mt-3">
+                  <div class="col-md-6"><input type="text" class="form-control" placeholder="Username"  formControlName="Username" ><a style="color:white">Username</a></div>
+                  <div class="col-md-6"><input type="text" class="form-control"  placeholder="password"  formControlName="password"><a style="color:white">password</a></div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-md-6"><input type="text" class="form-control" placeholder="IsAdmin"  formControlName="IsAdmin" ><a style="color:white">IsAdmin</a></div>
+                <div class="col-md-6"><input type="text" class="form-control"  placeholder="usertype"  formControlName="usertype"><a style="color:white">usertype</a></div>
+            </div>
+              <div class="mt-5 text-right"><button class="btn btn-primary profile-button" type="button" (click)="save()">Save Profile</button></div>
+          </div>
+      </div>
+
+  </div>
+</form>
+</div>
+</body>

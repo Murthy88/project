@@ -1,0 +1,7 @@
+body {margin:2em;}
+td:last-child {text-align:center;}
+.search-list{
+  padding-right: 1000px;
+  padding-left:35px;
+  padding-top: 35px;
+}

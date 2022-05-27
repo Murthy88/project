@@ -1,0 +1,40 @@
+
+<body style="background-color: rgb(216, 117, 81);">
+
+<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%" style="background-image: url(); background-size: cover;">
+	<thead>
+		<tr style="background-color: green;">
+      <th>RoleID</th>
+      <th>RoleName</th>
+			<th>RoleUniqID</th>
+			<th>RoleType</th>
+			<th>Rolestatus</th>
+      <th style="text-align: center;">Action</th>
+
+
+
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let role of Roles | paginate: { itemsPerPage: 8, currentPage: p }">
+      <td style="background-color:burlywood">{{role.role_Id}}</td>
+			<td style="background-color:burlywood">{{role.role_Name}}</td>
+			<td style="background-color:burlywood">{{role.role_Uniqid}}</td>
+			<td style="background-color:burlywood">{{role.role_Type}}</td>
+			<td style="background-color:burlywood">{{role.role_Status}}</td>
+
+			<td style="background-color:burlywood">
+				<button type="button" class="btn btn-primary btn-xs dt-edit" style="margin-right:16px;" routerLink="/admin/editrole">
+				Edit
+				</button>
+				<button type="button" class="btn btn-danger btn-xs dt-delete">
+					delete
+				</button>
+			</td>
+		</tr>
+	</tbody>
+
+</table>
+
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
+</body>
