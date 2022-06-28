@@ -1,0 +1,57 @@
+
+
+<!-- The Modal -->
+<div class="body">
+  <form [formGroup]="userform" >
+<h2 style="align-items:center;">
+  AddUser
+</h2>
+<div class="mb-3">
+  <input class="form-control mb-3" placeholder="Username" formControlName='username'>
+  <div *ngIf="userform.controls['username'].invalid && (userform.controls['username'].dirty || userform.controls['username'].touched)">
+    <div *ngIf="userform.controls['username'].errors?.['required']" style="color: rgb(233, 59, 59);">Username is required.</div>
+    </div>
+  </div>
+  <div class="mb-3">
+    <input class="form-control mb-3" placeholder="Password" formControlName='password'>
+    <div *ngIf="userform.controls['password'].invalid && (userform.controls['password'].dirty || userform.controls['password'].touched)">
+      <div *ngIf="userform.controls['password'].errors?.['required']" style="color: rgb(233, 59, 59);">Password is required.</div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <select class="form-select  form-control" aria-label="Default select example" formControlName="role" (change)="change($event)">
+        <option value="" disabled selected hidden>Role</option>
+        <option value="12">Admin</option>
+        <option value="15">Manager</option>
+        <option value="16">Employee</option>
+      </select>
+      <div *ngIf="userform .controls['userstatus'].invalid && (userform.controls['userstatus'].dirty || userform.controls['userstatus'].touched)">
+        <div *ngIf="userform.controls['userstatus'].errors?.['required']"style="color: rgb(233, 59, 59);">
+          Userstatus is required
+        </div>
+      </div>
+    </div>
+
+      <div class="mb-3">
+        <select class="form-select  form-control" aria-label="Default select example" formControlName="userstatus">
+          <option value="" disabled selected hidden>User status</option>
+          <option >Y</option>
+          <option >N</option>
+        </select>
+        <div *ngIf="userform .controls['userstatus'].invalid && (userform.controls['userstatus'].dirty || userform.controls['userstatus'].touched)">
+          <div *ngIf="userform.controls['userstatus'].errors?.['required']"style="color: rgb(233, 59, 59);">
+            Userstatus is required
+          </div>
+        </div>
+      </div>
+
+  </form>
+
+<div class="footer">
+
+  <!-- <button type="button" class="btn btn-secondary" >Close</button> -->
+  <button type="button" class="btn btn-primary" [disabled]="!userform.valid" (click)="user()">Save</button>
+</div>
+
+</div>
+

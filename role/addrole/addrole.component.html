@@ -1,0 +1,36 @@
+
+
+<!-- The Modal -->
+<div class="body">
+  <form [formGroup]="Roleform" >
+<h2 style="align-items:center;">
+  AddRole
+</h2>
+<div class="mb-3">
+  <input class="form-control mb-3" placeholder="firstname" formControlName='firstname'>
+  <div *ngIf="Roleform.controls['firstname'].invalid && (Roleform.controls['firstname'].dirty || Roleform.controls['firstname'].touched)">
+    <div *ngIf="Roleform.controls['firstname'].errors?.['required']" style="color: rgb(233, 59, 59);">Firstname is required.</div>
+    </div>
+  </div>
+      <div class="mb-3">
+        <select class="form-select  form-control" aria-label="Default select example" formControlName="rolestatus">
+          <option value="" disabled selected hidden>Role status</option>
+          <option >Y</option>
+          <option >N</option>
+        </select>
+        <div *ngIf="Roleform .controls['rolestatus'].invalid && (Roleform.controls['rolestatus'].dirty || Roleform.controls['rolestatus'].touched)">
+          <div *ngIf="Roleform.controls['rolestatus'].errors?.['required']"style="color: rgb(233, 59, 59);">
+            Rolestatus is required
+          </div>
+        </div>
+      </div>
+
+  </form>
+
+<div class="footer">
+
+  <!-- <button type="button" class="btn btn-secondary" >Close</button> -->
+  <button type="button" class="btn btn-primary" [disabled]="!Roleform.valid"(click)="role()">Save</button>
+</div>
+
+</div>

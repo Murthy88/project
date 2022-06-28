@@ -1,0 +1,74 @@
+
+<header id="header" class="fixed-top">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+    <h1 class="logo me-auto me-lg-0"><a href="/home">Spyhre Shoping</a></h1>
+
+  <nav id="navbar" class="navbar order-last order-lg-0">
+    <ul>
+      <li><a href="#" (click)="logout()">Home</a></li>
+      <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        User
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <li><a class="dropdown-item" (click)="adduser()">Add User</a></li>
+        <li><a class="dropdown-item" routerLink="/user/viewusers" >View User</a></li>
+      </ul>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Role
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <li class="nav-item dropdown"><a  href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Privilages</a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" (click)="addprivilage()">Add Privilages </a></li>
+            <li><a class="dropdown-item"  routerLink="/privilage/viewprivilage" >View Privilages </a></li>
+           
+          </ul></li>
+
+        <li><a class="dropdown-item"  (click)="view()">Add Role</a></li>
+        <li><a class="dropdown-item" routerLink="/role/viewrole">View Role</a></li>
+       
+      </ul>
+    </li>
+
+      <li  class="nav-item dropdown"> <a  class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Product</a>
+                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                  <li class="nav-item dropdown"><a  href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Items </a>
+                                     <ul class="dropdown-menu"    aria-labelledby="navbarDropdownMenuLink">
+                                     <li><a class="dropdown-item"  (click)="additem()">Add Items </a></li>
+                                     <li><a class="dropdown-item"   routerLink="/items/viewitem">View Items </a></li>
+                                    
+                                     </ul></li>
+
+
+          <li class="nav-item dropdown"><a  href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">ItemGroup </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" (click)="addigrp()">Add ItemGroup </a></li>
+              <li><a class="dropdown-item" routerLink="/group/view">View ItemGroup </a></li>
+              
+            </ul></li>
+
+
+                        <li class="nav-item dropdown"><a  href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">price Details </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <li><a class="dropdown-item" (click)="addprice()">Add  priceDetails </a></li>
+                          <li><a class="dropdown-item" routerLink="/price/view">View  priceDetails </a></li>
+          
+                          </ul></li>
+                           </ul>
+
+
+      </li>
+    </ul>
+    <i class="bi bi-list mobile-nav-toggle"></i>
+  </nav><!-- .navbar -->
+  <div></div>
+  <!-- <div class="header-social-links">
+    <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+    <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+    <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+    <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+  </div> -->
+</div>
+</header>

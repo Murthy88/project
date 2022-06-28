@@ -1,0 +1,47 @@
+
+
+<!-- The Modal -->
+<div class="body">
+  <form [formGroup]="itemform" >
+<h2 style="align-items:center;">
+  AddItem
+</h2>
+<div class="mb-3">
+  <input class="form-control mb-3" placeholder="Itemname" formControlName='itemname'>
+  <div *ngIf="itemform.controls['itemname'].invalid && (itemform.controls['itemname'].dirty || itemform.controls['itemname'].touched)">
+    <div *ngIf="itemform.controls['itemname'].errors?.['required']" style="color: rgb(233, 59, 59);">Itemname is required.</div>
+    </div>
+  </div>
+  <div class="mb-3">
+    <input class="form-control mb-3" placeholder="ItemDescount" formControlName='itemDesc'>
+    <div *ngIf="itemform.controls['itemDesc'].invalid && (itemform.controls['itemDesc'].dirty || itemform.controls['itemDesc'].touched)">
+      <div *ngIf="itemform.controls['itemDesc'].errors?.['required']" style="color: rgb(233, 59, 59);">ItemDescount is required.</div>
+      </div>
+    </div>
+      <div class="mb-3">
+        <select class="form-select  form-control" aria-label="Default select example" formControlName="itemstatus">
+          <option value="" disabled selected hidden>Itemstatus</option>
+          <option >Y</option>
+          <option >N</option>
+        </select>
+        <div *ngIf="itemform .controls['itemstatus'].invalid && (itemform.controls['itemstatus'].dirty || itemform.controls['itemstatus'].touched)">
+          <div *ngIf="itemform.controls['itemstatus'].errors?.['required']"style="color: rgb(233, 59, 59);">
+            Itemstatus is required
+          </div>
+        </div>
+      </div>
+    </form>
+      <div class="d-flex flex-column align-items-center text-center p-2 py-4 ">
+        <img [src]="url" width="275" >
+
+        <input type="file" style="display:none" (change)="selectFile($event)" #input >
+        <button type="button" (click)="input.click()" style="background-color:darkblue;color:white">Browse</button>
+
+</div>
+<div class="footer">
+
+  <!-- <button type="button" class="btn btn-secondary" >Close</button> -->
+  <button type="button" class="btn btn-primary"  (click)=" items()">Save</button>
+</div>
+
+</div>

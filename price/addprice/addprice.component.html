@@ -1,0 +1,66 @@
+
+
+
+<!-- The Modal -->
+<div class="body">
+  <form [formGroup]="priceform" >
+<h2 style="align-items:center;">
+  AddItemPrice
+</h2>
+<div class="mb-3">
+  <input class="form-control mb-3" placeholder="Priceitemid" formControlName='piid'>
+  <div *ngIf="priceform.controls['piid'].invalid && (priceform.controls['piid'].dirty || priceform.controls['piid'].touched)">
+    <div *ngIf="priceform.controls['piid'].errors?.['required']" style="color: rgb(233, 59, 59);">Priceitemid is required.</div>
+    </div>
+  </div>
+<div class="mb-3">
+  <input class="form-control mb-3" placeholder="Price MRP" formControlName='mrp'>
+  <div *ngIf="priceform.controls['mrp'].invalid && (priceform.controls['mrp'].dirty || priceform.controls['mrp'].touched)">
+    <div *ngIf="priceform.controls['mrp'].errors?.['required']" style="color: rgb(233, 59, 59);">price MRP is required.</div>
+    </div>
+  </div>
+  <div class="mb-3">
+    <input class="form-control mb-3" placeholder="Marketprice" formControlName='marketprice'>
+    <div *ngIf="priceform.controls['marketprice'].invalid && (priceform.controls['mrp'].dirty || priceform.controls['marketprice'].touched)">
+      <div *ngIf="priceform.controls['marketprice'].errors?.['required']" style="color: rgb(233, 59, 59);">Market price is required.</div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <input class="form-control mb-3" placeholder="Discount" formControlName='discount'>
+      <div *ngIf="priceform.controls['discount'].invalid && (priceform.controls['discount'].dirty || priceform.controls['discount'].touched)">
+        <div *ngIf="priceform.controls['discount'].errors?.['required']" style="color: rgb(233, 59, 59);">Discount  is required.</div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label style="color:blue ;">StartDate</label>
+        <input type="date" class="form-control mb-3" placeholder="StartDate" formControlName='startdate'>
+        <div *ngIf="priceform.controls['startdate'].invalid && (priceform.controls['startdate'].dirty || priceform.controls['startdate'].touched)">
+          <div *ngIf="priceform.controls['startdate'].errors?.['required']" style="color: rgb(233, 59, 59);">startdate  is required.</div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label style="color:blue ;">End Date</label>
+          <input type="date" class="form-control mb-3"formControlName='enddate'>
+          <div *ngIf="priceform.controls['enddate'].invalid && (priceform.controls['enddate'].dirty || priceform.controls['enddate'].touched)">
+            <div *ngIf="priceform.controls['enddate'].errors?.['required']" style="color: rgb(233, 59, 59);">startdate  is required.</div>
+            </div>
+          </div>
+      <div class="mb-3">
+        <select class="form-select  form-control" aria-label="Default select example" formControlName="status">
+          <option value=""disabled selected hidden >Status</option>
+          <option >Y</option>
+          <option >N</option>
+        </select>
+        <div *ngIf="priceform.controls['status'].invalid && (priceform.controls['status'].dirty || priceform.controls['status'].touched)">
+          <div *ngIf="priceform.controls['status'].errors?.['required']" style="color: rgb(233, 59, 59);">status  is required.</div>
+          </div>
+      </div>
+    </form>
+
+<div class="footer">
+
+  <!-- <button type="button" class="btn btn-secondary" >Close</button> -->
+  <button type="button" class="btn btn-primary" (click)="addprice()" >Save</button>
+</div>
+
+</div>
