@@ -1,10 +1,10 @@
-<div class="body">
+<div class="body" style="text-align:center;">
   <form [formGroup]="Editform" >
 <h2 style="align-items:center;">
   EditItem
 </h2>
 <div class="mb-3">
-  <input class="form-control mb-3" placeholder="ID" formControlName='id' >
+  <input class="form-control mb-3"  formControlName='id' >
 
   </div>
 <div class="mb-3">
@@ -24,7 +24,14 @@
           <input class="form-control mb-3" placeholder="Itemgroupid" formControlName='itemgid'>
 
           </div>
+          <img [src]="img" [style.display]="name">
+          <div class="d-flex flex-column align-items-center text-center p-2 py-4 ">
+            <img [src]="url" width="275" >
 
+            <input type="file" style="display:none" (change)="selectFile($event)" #input >
+            <button type="button" (click)="input.click()" style="background-color:darkblue;color:white">change image</button>
+
+    </div>
 
 
   </form>
